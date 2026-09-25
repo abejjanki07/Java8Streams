@@ -14,7 +14,7 @@
 10. [`filter()`](#10-filter)
 11. [Predicate](#11-predicate)
 12. [`map()`](#12-map)
-13. Function](#13-function)
+13. [Function](#13-function)
 14. [`filter()` + `map()`](#14-filter--map)
 15. [Intermediate Operations](#15-intermediate-operations)
 16. [Terminal Operations](#16-terminal-operations)
@@ -34,9 +34,8 @@
 30. [Most Important Stream Operations](#30-most-important-stream-operations)
 31. [Interview Quick Revision](#31-interview-quick-revision)
 32. [One-Minute Cheat Sheet](#32-one-minute-cheat-sheet)
-33. [`flatMap()` — Interview Definition](#33-flatmap--interview-definition)
-34. [`map()` vs `flatMap()` — Interview Answer](#34-map-vs-flatmap--interview-answer)
-
+33. [What is `flatMap()`?](#33-what-is-flatmap)
+34. [What is the difference between `map()` and `flatMap()`?](#34-what-is-the-difference-between-map-and-flatmap)
 ## 1. What is Stream API?
 
 Java 8 Stream API provides a way to process data from collections and other sources using a **declarative, functional-style approach**.
