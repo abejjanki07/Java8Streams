@@ -34,6 +34,9 @@
 30. [Most Important Stream Operations](#30-most-important-stream-operations)
 31. [Interview Quick Revision](#31-interview-quick-revision)
 32. [One-Minute Cheat Sheet](#32-one-minute-cheat-sheet)
+33. [`flatMap()`](#flatmap)
+34. [`map()` vs `flatMap()`](#map-vs-flatmap)
+35. [`flatMap()` — Interview Scripts](#flatmap--interview-scripts)
 
 ## 1. What is Stream API?
 
@@ -1072,3 +1075,94 @@ Think:
 ```text
 FILTER → TRANSFORM → LIMIT → COLLECT
 ```
+
+## 1. What is `flatMap()`?
+
+> "`flatMap()` is a Stream API intermediate operation used when we have nested data, such as a list of lists or an object containing a list, and we want to flatten that nested structure into a single stream. It essentially combines mapping and flattening into one operation."
+
+### Example
+
+```java
+List<List<Integer>> numbers = Arrays.asList(
+        Arrays.asList(1, 2, 3),
+        Arrays.asList(4, 5, 6)
+);
+
+List<Integer> result = numbers.stream()
+        .flatMap(Collection::stream)
+        .collect(Collectors.toList());
+```
+
+Here:
+
+```text
+Stream<List<Integer>>
+        ↓
+    flatMap()
+        ↓
+Stream<Integer>
+```
+
+### Short version
+
+If the interviewer wants a quick answer:
+
+> "`flatMap()` is used to flatten nested streams into a single stream. It is useful when one element can contain multiple values, such as a list of skills inside an Employee."
+
+---
+
+## 2. What is the difference between `map()` and `flatMap()`?
+
+> "`map()` is mainly used for transformation, where each input element is converted into one output element. `flatMap()` is used when an input element can produce multiple elements, and it also flattens those nested results into a single stream."
+
+### Example of `map()`
+
+```java
+List<String> names = Arrays.asList("John", "Alex");
+
+List<Integer> lengths = names.stream()
+        .map(String::length)
+        .collect(Collectors.toList());
+```
+
+Here:
+
+```text
+String → Integer
+   1       1
+```
+
+So:
+
+```text
+map() → 1 input → 1 output
+```
+
+### Example of `flatMap()`
+
+```java
+List<List<Integer>> numbers = Arrays.asList(
+        Arrays.asList(1, 2, 3),
+        Arrays.asList(4, 5, 6)
+);
+
+List<Integer> result = numbers.stream()
+        .flatMap(Collection::stream)
+        .collect(Collectors.toList());
+```
+
+Here:
+
+```text
+List<Integer> → multiple Integers
+```
+
+So:
+
+```text
+flatMap() → 1 input → multiple outputs → flattened
+```
+
+### One-line interview answer
+
+> "`map()` transforms one element into another element, whereas `flatMap()` transforms and flattens nested elements into a single stream."

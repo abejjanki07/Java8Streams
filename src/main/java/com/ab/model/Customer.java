@@ -1,4 +1,4 @@
-package com.ab.practice;
+package com.ab.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,9 +9,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
-    int id;
-    String name;
-    String department;
-    double salary;
+public class Customer {
+    private String customerName;
+    private List<String> productName;
 }

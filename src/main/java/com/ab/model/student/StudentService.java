@@ -1,4 +1,4 @@
-package com.ab.student;
+package com.ab.model.student;
 
 import java.util.ArrayList;
 import java.util.List;
