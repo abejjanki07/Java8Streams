@@ -34,9 +34,8 @@
 30. [Most Important Stream Operations](#30-most-important-stream-operations)
 31. [Interview Quick Revision](#31-interview-quick-revision)
 32. [One-Minute Cheat Sheet](#32-one-minute-cheat-sheet)
-33. [`flatMap()`](#flatmap)
-34. [`map()` vs `flatMap()`](#map-vs-flatmap)
-35. [`flatMap()` — Interview Scripts](#flatmap--interview-scripts)
+33. [`flatMap()` — Interview Definition](#33-flatmap--interview-definition)
+34. [`map()` vs `flatMap()` — Interview Answer](#34-map-vs-flatmap--interview-answer)
 
 ## 1. What is Stream API?
 
