@@ -1075,7 +1075,7 @@ Think:
 FILTER → TRANSFORM → LIMIT → COLLECT
 ```
 
-## 1. What is `flatMap()`?
+## 33. What is `flatMap()`?
 
 > "`flatMap()` is a Stream API intermediate operation used when we have nested data, such as a list of lists or an object containing a list, and we want to flatten that nested structure into a single stream. It essentially combines mapping and flattening into one operation."
 
@@ -1110,7 +1110,7 @@ If the interviewer wants a quick answer:
 
 ---
 
-## 2. What is the difference between `map()` and `flatMap()`?
+## 34. What is the difference between `map()` and `flatMap()`?
 
 > "`map()` is mainly used for transformation, where each input element is converted into one output element. `flatMap()` is used when an input element can produce multiple elements, and it also flattens those nested results into a single stream."
 
